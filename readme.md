@@ -14,6 +14,8 @@ Les utilisateurs peuvent :
 
 Toutes les données sensibles sont sécurisées et stockées dans une base de données **MySQL**.
 
+![pm](https://github.com/user-attachments/assets/aff99489-cead-4ada-a83d-d80195105727)
+
 ---
 
 ## 🧠 Contexte du projet
@@ -79,7 +81,7 @@ L’architecture a été entièrement repensée autour du **modèle MVC**, avec 
 1. **Cloner le projet**
 
 ```bash
-git clone <URL_DU_PROJET>
+git clone "https://github.com/karimhantaou/PasswordManager.git"
 cd PasswordManager
 ```
 
