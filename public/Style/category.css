@@ -1,0 +1,243 @@
+/* General */
+
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+}
+
+.main{
+    width: 100%; /* S'assure que la page occupe tout l'espace horizontal */
+    height: 100%; /* S'assure que la page occupe toute la hauteur */
+    
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2.5em;
+}
+
+/* Panels */
+
+.leftPanel {
+    width: 50%; /* Définit 50% de la largeur */
+    display: flex;
+    justify-content: center;
+}
+
+.rightPanel {
+    width: 50%; /* Définit 50% de la largeur */
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button, input[type="submit"]{
+    cursor: pointer;
+}
+
+/* Content */
+
+/* Left panel content */
+
+.leftPanel .accountContainer{
+    width: 70%;
+
+    margin-top: 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Account Container */
+
+.searchContainer{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchContainer input{
+    width: 69%;
+}
+
+.searchContainer select{
+    width : 30%;
+}
+
+
+.accountButton{
+    width: 100%;
+    border-radius: 5px;
+    padding: 4%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+    background-color: var(--color3);
+    border: 3px solid var(--color3);
+
+
+    color: white;
+
+    font-size: large;
+    margin-top: 1em;
+}
+
+.accountButton:hover{
+    background-color: var(--color4);
+    color : var(--color1);
+}
+
+.account {
+    display : none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3em;
+
+    width: 100%;
+    margin-top: 0.35em;
+    border-radius: 5px;
+    padding: 2%;
+    box-sizing: border-box; /* Important pour gérer le padding */
+    background-color: var(--color4);
+}
+
+.accountInfo{
+    width: 80%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accountInfo form{
+    width: 100%;
+}
+
+.accountOption{
+    width: 80%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Left Panel Inputs  */
+
+.accountOption form{
+    width: 45%;
+}
+
+.accountOption form input{
+    width: 100%;
+}
+
+.accountOption input{
+    width : 45%;
+}
+
+
+/* Right panel content */
+
+.rightPanel .rightPanelContent{
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rightPanel .addAccountContainer{
+    width: 50%;
+}
+
+.rightPanel .addAccountContainer form{
+    width: 100%;
+    padding: 5%;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color4);
+}
+
+
+.rightPanel .addCategoryContainer{
+    width: 50%;
+}
+
+.rightPanel .addCategoryContainer form{
+    width: 100%;
+    padding: 5%;
+    border-radius: 5px;
+
+    background-color: var(--color4);
+}
+
+
+.rightPanel input[type="submit"]{
+    width: 100%;
+}
+
+.rightPanelTitle{
+    width: 100%;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+    .main{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .leftPanel, .rightPanel{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .rightPanel .rightPanelContent{
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .rightPanel .addAccountContainer, .rightPanel .addCategoryContainer{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .rightPanel{
+        margin-top: 1em;
+        height: auto    ;
+    }
+    
+    .rightPanel form{
+        box-sizing: border-box;
+    }
+  }

@@ -1,0 +1,361 @@
+/* General */
+body {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+}
+
+.main{
+    width: 100%; /* S'assure que la page occupe tout l'espace horizontal */
+        
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2.5em;
+}
+
+/* Panels */
+
+.leftPanel {
+    width: 50%; /* Définit 50% de la largeur */
+    display: flex;
+    justify-content: center;
+}
+
+.rightPanel {
+    width: 50%; /* Définit 50% de la largeur */
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button, input[type="submit"]{
+    cursor: pointer;
+}
+
+/* Content */
+
+/* Left panel content */
+
+.leftPanel .accountContainer{
+    width: 70%;
+
+    margin-top: 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accountTitleLabel{
+    width: 100%;
+    margin-bottom: 20px;
+
+    font-size: xx-large;
+    color: var(--color4);
+}
+
+/* Account Container */
+
+.searchContainer{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100px;
+}
+
+.searchContainer input[type="text"]{
+    width: 100%;
+    height: 3.5em;
+    padding: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right:0;
+}
+
+.searchContainer button{
+    width: 8%;
+    height: 3.5em;
+    padding: 0.6em;
+    border-radius: 500px;
+    margin: 0 !important;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    background-color: var(--color3);
+
+    border:2px solid var(--color4);
+    border-left:0;
+}
+
+.searchContainer button svg{
+    width: 100%;
+    height: 100%;
+}
+
+.searchContainer path{
+    fill: white;
+}
+
+.searchContainer button:hover{
+    background-color: var(--color4);
+}
+.searchContainer button:hover path{
+    fill: var(--color3);
+}
+
+.searchContainer input[type="text"]:hover + button, .searchContainer input[type="text"]:focus + button{
+    border: 2px solid var(--color3) !important;
+    border-left:0 !important;
+}
+
+
+.searchContainer .searchOption{
+    display: flex;
+    height: 46%;
+}
+
+.searchContainer select{
+    width : 30%;
+    height: 100%;
+    padding: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-right: 2%;
+}
+
+.accountButton{
+    width: 100%;
+    border-radius: 5px;
+    padding: 4%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+    background-color: var(--color3);
+    border: 3px solid var(--color3);
+
+
+    color: white;
+
+    font-size: large;
+    margin-top: 1em;
+}
+
+.accountButton:hover{
+    background-color: var(--color4);
+    color : var(--color1);
+}
+
+.account {
+    display : none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3em;
+
+    width: 100%;
+    margin-top: 0.35em;
+    border-radius: 5px;
+    padding: 2%;
+    box-sizing: border-box; /* Important pour gérer le padding */
+    background-color: var(--color4);
+}
+
+.accountInfo{
+    width: 80%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accountInfo form{
+    width: 100%;
+}
+
+.accountInfo textarea{
+    resize: vertical;
+}
+
+.accountOption{
+    width: 80%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accountInfo input{
+    font-size:1.1em;
+}
+
+/* Left Panel Inputs  */
+
+.accountOption form{
+    width: 45%;
+    height: 100%;
+}
+
+.accountOption form input{
+    width: 100%;
+    height: 100%;
+}
+
+.accountOption input{
+    width : 45%;
+    height: 100%;
+}
+
+
+.inputContainer{
+    position:relative;
+}
+
+.copyButton{
+    position: absolute;
+    right:-30px;
+    top: 10px;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border:0;
+    background-color: transparent;
+}
+
+.copyButton svg{
+    width: 100%;
+    height: 100%;
+}
+
+.copyButton path{
+    fill: white;
+}
+.copyButton:hover path{
+    fill: var(--color3);
+}
+
+/* Right panel content */
+
+.rightPanel .rightPanelContent{
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rightPanel .addAccountContainer{
+    width: 50%;
+}
+
+.rightPanel .addAccountContainer form{
+    width: 100%;
+    padding: 5%;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color4);
+}
+
+
+.rightPanel .addCategoryContainer{
+    width: 50%;
+}
+
+.rightPanel .addCategoryContainer form{
+    width: 100%;
+    padding: 5%;
+    border-radius: 5px;
+
+    background-color: var(--color4);
+}
+
+.rightPanel input[type="submit"]{
+    width: 100%;
+}
+
+.addAccountContainer .categoryContainer, .accountContainer .categoryContainer{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position:relative;
+}
+
+.addAccountContainer .categoryContainer select, .addAccountContainer .categoryContainer input, .accountContainer .categoryContainer input, .accountContainer .categoryContainer select{
+    width: 100%;
+}
+
+.addAccountContainer .categoryContainer button, .accountContainer .categoryContainer button{
+    width: 15px;
+    height: 15px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    right:-28px;
+    top:10px;
+    padding: 0;
+    margin: 0;
+}
+
+.addAccountContainer .categoryContainer button svg, .accountContainer .categoryContainer button svg{
+    width: 100%;
+    height: 100%;
+}
+
+.addAccountContainer .categoryContainer button path, .accountContainer .categoryContainer button path{
+    fill:white;
+}
+
+.addAccountContainer .categoryContainer button path:hover, .accountContainer .categoryContainer button:hover path{
+    fill:var(--color3);
+}
+
+.addAccountContainer .categoryContainer input, .accountContainer .categoryContainer input{
+    display: none;
+}
+
+.rightPanelTitle{
+    width: 100%;
+}
+
+.dateLabel{
+    font-size: small;
+    color: var(--color1);
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+
+    .leftPanel{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rightPanel{
+        display: none;
+    }
+  }

@@ -1,0 +1,19 @@
+{
+    "name": "karimhantaou/password-manager",
+    "description": "Seconde version de Password Manager suivant la structure MVC.",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "Config\\" : "app/Config/",
+            "Helpers\\" : "app/Helpers/",
+            "Router\\" : "app/Router/",
+            "Classes\\": "app/Classes/",
+            "Models\\": "app/Models/",
+            "Controllers\\": "app/Controllers/",
+            "Views\\": "app/Views/"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
